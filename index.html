@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CultureConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🌍 CultureConnect</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#explore">Explore</a>
+        <a href="#map">World Map</a>
+        <a href="#compare">Compare</a>
+        <a href="#favourites">Favourites</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <h2>Discover the World!</h2>
+    <p>Explore 30 countries and discover their food, culture, history and festivals.</p>
+    <a href="#explore"><button>Explore Countries</button></a>
+</section>
+
+<section id="explore">
+    <h2>Explore Countries</h2>
+
+    <input type="text" id="searchInput" placeholder="Search country...">
+
+    <select id="continentFilter">
+        <option value="All">All Continents</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Africa">Africa</option>
+        <option value="North America">North America</option>
+        <option value="South America">South America</option>
+        <option value="Oceania">Oceania</option>
+    </select>
+
+    <select id="sortSelect">
+        <option value="az">A to Z</option>
+        <option value="za">Z to A</option>
+    </select>
+
+    <p id="resultTotal"></p>
+    <div id="countryGrid" class="country-grid"></div>
+</section>
+
+<section id="map">
+    <h2>Interactive World Map 🌍</h2>
+    <p>Click any country marker to see its information.</p>
+
+    <div id="worldMap" class="world-map">
+        <div id="mapMarkers"></div>
+    </div>
+
+    <div id="mapInfo" class="map-info">
+        Select a country on the map.
+    </div>
+</section>
+
+<section id="compare">
+    <h2>Compare Countries</h2>
+
+    <select id="compareOne"></select>
+    <span> VS </span>
+    <select id="compareTwo"></select>
+
+    <button id="compareButton">Compare Now</button>
+
+    <div id="comparisonResult"></div>
+</section>
+
+<section id="favourites">
+    <h2>My Favourite Countries ❤️</h2>
+    <div id="favouriteGrid" class="country-grid"></div>
+    <p id="favouriteEmpty">No favourite countries added.</p>
+</section>
+
+<section id="profile">
+    <h2>My Profile</h2>
+
+    <form id="profileForm">
+        <input type="text" id="profileName" placeholder="Your name" required>
+        <input type="text" id="homeCountry" placeholder="Your country">
+        <button type="submit">Save Profile</button>
+    </form>
+
+    <p id="profileMessage"></p>
+</section>
+
+<div id="countryModal" class="modal">
+    <div class="modal-content">
+        <button id="modalClose" class="close-button">X</button>
+        <div id="countryDetail"></div>
+    </div>
+</div>
+
+<footer>
+    <h3>🌍 CultureConnect</h3>
+    <p>Discover the world. Understand cultures.</p>
+</footer>
+
+<script src="countries.js"></script>
+<script src="storage.js"></script>
+<script src="map.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
